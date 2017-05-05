@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>社会管理综合治理服务平台</title>
+    <meta name="description" content="">
+    <meta name="author" content="尚宏浩">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        /*html{
+            padding: 20px;
+        }*/
+      body{
+        background-image: url("images/middle.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        /*padding-top: 150px;*/
+        /*padding: 20px;*/
+      }
+   .logo{
+       width: 220px;
+       position: absolute;
+       top: 20px;
+       left: 20px;
+   }
+   .exit{
+       float: right;
+       width: 100px;
+       cursor: pointer;
+       position: absolute;
+       top: 20px;
+       right: 20px;
+   }
+   main{
+       /*border: solid 1px red;*/
+       height: 150px;
+       top: calc((100vh - 150px)/2);
+       width: 100%;
+       position: absolute;
+       background-color: rgba(250,250,250,0.5);
+       display: flex;
+       justify-content: space-around;
+       padding: 20px 80px;
+   }
+   main>div{
+       /*border: solid 1px red;*/
+       width: 100px;
+       text-align: center;
+       position: relative;
+       cursor: pointer;
+   }
+   main img{
+       width: 70px;
+   }
+   main span{
+       display: block;
+       /*position: absolute;
+       bottom: 0;*/
+       margin-top: 15px;
+   }
+    </style>
+    <!-- endbuild -->
+  </head>
+  <body ng-app="">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <img class="logo" src="images/title.png">
+    <img class="exit" src="images/exit.png">
+   <main>
+    <div>
+        <img src="images/wlgl1.png" alt="">
+        <span>网络管理</span>
+    </div>
+    <div>
+        <img src="images/jcsj1.png" alt="">
+        <span>基础数据</span>
+    </div>
+    <div>
+        <img src="images/lwyt1.png" alt="">
+        <span>六位一体</span>
+    </div>
+    <div>
+        <img src="images/mdhj1.png" alt="">
+        <span>化解矛盾</span>
+    </div>
+    <div>
+        <img src="images/sjcl1.png" alt="">
+        <span>事件处理</span>
+    </div>
+    <div>
+        <img src="images/tzgg1.png" alt="">
+        <span>通知公告</span>
+    </div>
+    <div>
+        <img src="images/szdt1.png" alt="">
+        <span>数字地图</span>
+    </div>
+    <div>
+        <img src="images/xtgl1.png" alt="">
+        <span>系统管理</span>
+    </div>
+   </main>
+        <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script>
+            $('main>div').hover(function(){
+                var newstr = $(this).find('img').attr('src').replace(/1/, 2)
+                $(this).find('img').attr('src', newstr)
+                $(this).find('span').css("color", "rgb(30, 80, 174)")
+            }, function(){
+                var newstr = $(this).find('img').attr('src').replace(/2/, 1)
+                $(this).find('img').attr('src', newstr)
+                $(this).find('span').css("color", "#333")
+            })
+        </script>
+        <script src="scripts/index.js"></script>
+       
+</body>
+</html>
