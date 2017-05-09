@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>社会管理综合治理服务平台</title>
     <meta name="description" content="">
@@ -12,129 +13,152 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <!--<link rel="stylesheet" href="styles/main.css">-->
     <style>
-      body{
-        background-image: url("images/background.jpg");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        padding-top: 150px;
-      }
-      main{
-          /*border: solid 1px red;*/
-          width: 400px;
-          height: 330px;
-          margin: 0 auto;
-      }
-      .ups{
-          /*border: solid 1px blue;*/
-          height: 130px;
-      }
-      .ups>img{
-          width: 100%;
-      }
-      .downs{
-          border: solid 1px gray;
-          height: 200px;
-          border-radius: 25px;
-          overflow: hidden;
-          box-shadow: 1px 1px 5px gray;
-      }
-      .logpic{
-          height: 160px;
-          /*border: solid 1px green;*/
-          background-image: url(images/logback.png);
-          background-size: 100%;
-          position: relative;
-      }
-      .logdenglu{
-          height: 40px;
-          border: solid 1px blue;
-          background-color: rgb(54, 112, 210);
-      }
-      .logpic>form{
-        /*border: solid 1px red;*/
-        height: 70px;
-        position: absolute;
-        bottom: 30px;
-        width: 100%;
-      }
-      .s-input{
-          border-bottom: solid 1px black;
-          height: 50%;
-          width: 60%;
-          margin: 0 auto;
-          position: relative;
-      }
-      .s-input>img{
-          width: 15px;
-          position: absolute;
-          top: 8px;
+        html,body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            padding: 0;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        body {
+            background-image: url("images/background.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            padding-top: 150px;
+        }
 
-      }
-      .s-input>input{
-          width: 90%;
-          position: absolute;
-          left: 30px;
-          height: 100%;
-          background-color: transparent;
-          border: none;
-      }
-      .s-input>input:focus{
-          border: none;
-          outline: none;
-      }
-      .logpic>a{
-          position: absolute;
-          bottom: 7px;
-          right: 75px;
-          font-size: 12px;
-          color: rgb(117, 117, 117);
-          cursor: pointer;
-      }
-.logdenglu{
-    color: white;
-    line-height: 40px;
-    text-align: center;
-    font-size: 20px;
-    cursor: pointer;
-}
+        main {
+            /*border: solid 1px red;*/
+            width: 400px;
+            height: 330px;
+            margin: 0 auto;
+        }
+
+        .ups {
+            /*border: solid 1px blue;*/
+            height: 130px;
+        }
+
+        .ups>img {
+            width: 100%;
+        }
+
+        .downs {
+            border: solid 1px gray;
+            height: 200px;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 1px 1px 5px gray;
+        }
+
+        .logpic {
+            height: 160px;
+            /*border: solid 1px green;*/
+            background-image: url(images/logback.png);
+            background-size: 100%;
+            position: relative;
+        }
+
+        .logdenglu {
+            height: 40px;
+            border: solid 1px blue;
+            background-color: rgb(54, 112, 210);
+        }
+
+        .logpic>form {
+            /*border: solid 1px red;*/
+            height: 70px;
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+        }
+
+        .s-input {
+            border-bottom: solid 1px black;
+            height: 50%;
+            width: 60%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .s-input>img {
+            width: 15px;
+            position: absolute;
+            top: 8px;
+        }
+
+        .s-input>input {
+            width: 90%;
+            position: absolute;
+            left: 30px;
+            height: 100%;
+            background-color: transparent;
+            border: none;
+        }
+
+        .s-input>input:focus {
+            border: none;
+            outline: none;
+        }
+
+        .logpic>a {
+            position: absolute;
+            bottom: 7px;
+            right: 75px;
+            font-size: 12px;
+            color: rgb(117, 117, 117);
+            cursor: pointer;
+        }
+
+        .logdenglu {
+            color: white;
+            line-height: 40px;
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+        }
     </style>
     <!-- endbuild -->
-  </head>
-  <body ng-app="">
+</head>
+
+<body>
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-   <main>
-      <div class="ups">
-        <img src="images/title.png">
-      </div>
-      <div class="downs">
-        <div class="logpic">
-            <form action="">
-                <div class="s-input">
-                    <img src="images/person.png" alt="">
-                    <input required autofocus placeholder="用户名" type="text">
-                </div>
-                <div class="s-input">
-                    <img src="images/lock.png" alt="">
-                    <input required placeholder="密码" type="password">
-                </div>
-            </form>
-            <a>忘记密码？</a>
+    <main>
+        <div class="ups">
+            <img src="images/title.png">
         </div>
-        <div class="logdenglu">
-            登 录
+        <div class="downs">
+            <div class="logpic">
+                <form action="">
+                    <div class="s-input">
+                        <img src="images/person.png" alt="">
+                        <input required autofocus placeholder="用户名" type="text">
+                    </div>
+                    <div class="s-input">
+                        <img src="images/lock.png" alt="">
+                        <input required placeholder="密码" type="password">
+                    </div>
+                </form>
+                <a>忘记密码？</a>
+            </div>
+            <div class="logdenglu">
+                登 录
+            </div>
         </div>
-      </div>
-   </main>
-        <script src="../bower_components/jquery/dist/jquery.js"></script>
-        <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="scripts/index.js"></script>
-       
+    </main>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!--<script src="scripts/index.js"></script>-->
 </body>
+
 </html>

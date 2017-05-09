@@ -1,0 +1,61 @@
+<div class="gridleft">
+    <h3>基础数据</h3>
+    <div class="fenkai">
+        <div class="fwxq">
+            <div ui-sref="jcsj.fwxx" class="act">
+                <div class="tubiao"><img src="images/fangzi1.png" alt=""></div>
+                <div class="wenzi">房屋信息</div>
+            </div>
+            <div ui-sref="jcsj.rkxx">
+                <div class="tubiao"><img src="images/renkou2.png" alt=""></div>
+                <div class="wenzi">人口信息</div>
+            </div>
+            <div ui-sref="jcsj.ywsl">
+                <div class="tubiao"><img src="images/yiwai2.png" alt=""></div>
+                <div class="wenzi">一外三流</div>
+            </div>
+            <div ui-sref="jcsj.zdrq">
+                <div class="tubiao"><img src="images/zhongdian2.png" alt=""></div>
+                <div class="wenzi">重点人群</div>
+            </div>
+            <div ui-sref="jcsj.tjfx">
+                <div class="tubiao"><img src="images/tongji2.png" alt=""></div>
+                <div class="wenzi">统计分析</div>
+            </div>
+        </div>
+        <div ui-view class="xqcs">
+
+        </div>
+    </div>
+</div>
+<script>
+    $('.fwxq>div').hover(function(){
+        var newstr = $(this).find('img').attr('src').replace(/2/, 1)
+            $(this).find('img').attr('src', newstr)
+    }, function(){
+        if(!$(this).hasClass('act')){
+            var newstr = $(this).find('img').attr('src').replace(/1/, 2)
+            $(this).find('img').attr('src', newstr)
+        }
+        
+    })
+    $('.fwxq>div').click(function(){
+        $(this).addClass('act').siblings('div').removeClass('act')
+        var newstr = $(this).find('img').attr('src').replace(/2/, 1)
+        $(this).find('img').attr('src', newstr)
+        $(this).siblings('div').each(function(index, item){
+            // console.log(item)
+            // console.log(this)
+            // console.log($(this))
+           var src = $(this).find('img').attr('src')
+           if(src.match('1')){
+            //    console.log(1)
+            var newstr = $(this).find('img').attr('src').replace(/1/, 2)
+            $(this).find('img').attr('src', newstr)
+            return false;
+           }else{
+            //    console.log(2)
+           }
+        })
+    })
+</script>

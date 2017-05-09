@@ -1,68 +1,64 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>社会管理综合治理服务平台</title>
-    <meta name="description" content="">
-    <meta name="author" content="尚宏浩">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="styles/main.css">
-    
-    <!-- endbuild -->
-  </head>
-  <body ng-app="zfwApp">
-    <!--[if lte IE 8]>
+
+<head>
+  <meta charset="utf-8">
+  <title>社会管理综合治理服务平台</title>
+  <meta name="description" content="">
+  <meta name="author" content="尚宏浩">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="styles/main.css">
+
+  <!-- endbuild -->
+</head>
+
+<body ng-app="zfwApp">
+  <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
+  <!-- Add your site or application content here -->
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="#/">zfwhhhhhhhhhhhhhhhhhhhhhhhhhhhh</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div>
+  <header>
+    <img src="images/logo.png" alt="">
+    <div>
+      <div class="admin">
+        <div class="lan">
+          <span>总管理员:</span>
+          <span>admin!</span>
+          <span>[退出]</span>
         </div>
+        <div>修改密码？</div>
+      </div>
+      <div class="pic">
+        <img src="images/defhead.png" alt="">
       </div>
     </div>
+  </header>
+  <ul class="nav nav-pills">
+    <li role="presentation" class="active"><a ui-sref="gridManager">网格管理</a></li>
+    <li role="presentation"><a ui-sref="jcsj.fwxx.xqcs">基础数据</a></li>
+    <li role="presentation"><a ui-sref="lwyt">六位一体</a></li>
+    <li role="presentation"><a ui-sref="mdhj">矛盾化解</a></li>
+    <li role="presentation"><a ui-sref="sjcl">时间处理</a></li>
+    <li role="presentation"><a ui-sref="tzgg">通知公告</a></li>
+    <li role="presentation"><a ui-sref="szdt">数字地图</a></li>
+    <li role="presentation"><a ui-sref="xtgl">系统管理</a></li>
+  </ul>
+  <div ui-view></div>
 
-    <div class="container">
-    <div ng-view=""></div>
-    </div>
-
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
 
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <!--<script>
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <!--<script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
        (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
        r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
@@ -72,26 +68,27 @@
        ga('send', 'pageview');
     </script>-->
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <!-- endbower -->
-    <!-- endbuild -->
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <!-- endbower -->
+  <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="../bower_components/jquery/dist/jquery.js"></script>
-        <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="scripts/index.js"></script>
-        <script src="../bower_components/angular/angular.js"></script>
-        <script src="../bower_components/angular-animate/angular-animate.js"></script>
-        <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
-        <script src="../bower_components/angular-mocks/angular-mocks.js"></script>
-        <script src="../bower_components/angular-route/angular-route.js"></script>
-        <script src="../bower_components/angular-touch/angular-touch.js"></script>
-        <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
-        <script src="../bower_components/angular-resource/angular-resource.js"></script>
-        <script src="../bower_components/angular-ui-router.js"></script>
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <!-- endbuild -->
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="scripts/index.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-ui-router.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <!-- endbuild -->
 </body>
+
 </html>

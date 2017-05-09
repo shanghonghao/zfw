@@ -1,0 +1,16 @@
+<div class="gridManager">
+    <div ui-view="left"></div>
+    <div ui-view="right"></div>
+</div>
+<script>
+    window.onresize = function(){
+        reSize()
+    }
+    reSize()
+    function reSize(){
+        $('.gridManager').outerHeight((window.innerHeight - 110) + 'px')
+        $('.gridManager').outerWidth(window.innerWidth)
+        $('.gridManager>div:eq(1)').outerWidth((window.innerWidth - 200) + 'px')
+        $('.gridManager>div:eq(1)').outerHeight((window.innerHeight - 110) + 'px')
+    }
+</script>
