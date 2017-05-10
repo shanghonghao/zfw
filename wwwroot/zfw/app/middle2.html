@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>社会管理综合治理服务平台</title>
+    <meta name="description" content="">
+    <meta name="author" content="尚宏浩">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css">
+    <!--<link rel="stylesheet" href="styles/main.css">-->
+    <style>
+        html,body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            padding: 0;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        body {
+            background-image: url("assets/img/middle.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            /*padding-top: 150px;*/
+            /*padding: 20px;*/
+        }
+
+        .logo {
+            width: 220px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .exit {
+            float: right;
+            width: 100px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        main {
+            /*border: solid 1px red;*/
+            height: 150px;
+            top: calc((100vh - 150px)/2);
+            width: 100%;
+            position: absolute;
+            background-color: rgba(250, 250, 250, 0.5);
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 80px;
+        }
+
+        main>div {
+            /*border: solid 1px red;*/
+            width: 100px;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+        }
+
+        main img {
+            width: 70px;
+        }
+
+        main span {
+            display: block;
+            /*position: absolute;
+       bottom: 0;*/
+            margin-top: 15px;
+        }
+    </style>
+    <!-- endbuild -->
+</head>
+
+<body>
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <img class="logo" src="assets/img/title.png">
+    <img class="exit" src="assets/img/exit.png">
+    <main ng-app="middle" ng-controller="mcontrol">
+        <div id="btn1">
+            <img src="${req.contextPath}/assets/img/wlgl1.png" alt="">
+            <span>{{data[0]}}</span>
+        </div>
+        <div id="btn2">
+            <img src="assets/img/jcsj1.png" alt="">
+            <span>{{data[1]}}</span>
+        </div>
+        <div id="btn3">
+            <img src="assets/img/lwyt1.png" alt="">
+            <span>{{data[2]}}</span>
+        </div>
+        <div id="btn4">
+            <img src="assets/img/mdhj1.png" alt="">
+            <span>{{data[3]}}</span>
+        </div>
+        <div id="btn5">
+            <img src="assets/img/sjcl1.png" alt="">
+            <span>{{data[4]}}</span>
+        </div>
+        <div id="btn6">
+            <img src="assets/img/tzgg1.png" alt="">
+            <span>{{data[5]}}</span>
+        </div>
+        <div id="btn7">
+            <img src="assets/img/szdt1.png" alt="">
+            <span>{{data[6]}}</span>
+        </div>
+        <div id="btn8">
+            <img src="assets/img/xtgl1.png" alt="">
+            <span>{{data[7]}}</span>
+        </div> 
+        <div ng-repeat="btn in a.beans.menuType">
+        
+        </div>
+    </main>
+    <script src="assets/bower_components/jquery/dist/jquery.js"></script>
+    <script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    
+    <script>
+        $('main>div').hover(function () {
+            var newstr = $(this).find('img').attr('src').replace(/1/, 2)
+            $(this).find('img').attr('src', newstr)
+            $(this).find('span').css("color", "rgb(30, 80, 174)")
+        }, function () {
+            var newstr = $(this).find('img').attr('src').replace(/2/, 1)
+            $(this).find('img').attr('src', newstr)
+            $(this).find('span').css("color", "#333")
+        });
+       		 var contextPath = "/fwpt";
+       		 $(document).ready(function(){
+                 $.ajax({  
+                     url: "/fwpt/system/menu/queryMenuList",  
+                     type: 'GET',  
+                     dataType: 'json',  
+                     success: function (data) {
+                    	 var a=JSON.stringify(data);
+                    	 alert(a);
+					} //成功执行方法    
+                 })  
+             }); 
+
+    </script>
+    <script src="assets/bower_components/angular/angular.js" ></script>
+    <script>
+        angular.module('middle', []).controller('mcontrol',['$scope', '$http', function($scope, $http){
+            $scope.data = ['网络管理', '基础数据','网络管理', '基础数据','网络管理', '基础数据','网络管理', '基础数据',]
+            $http({
+                url:'/fwpt/system/menu/queryMenuList',
+                method:'GET'
+            }).success(function(data,header,config,status){
+                console.log(data)
+                // $scope.data = ['网络管理', '基础数据','网络管理', '基础数据','网络管理', '基础数据','网络管理', '基础数据',]
+                }).error(function(data,header,config,status){
+                });
+        }])
+    </script>
+    <!--<script src="scripts/index.js"></script>-->
+    <!--<script src="${req.contextPath}/assets/common/common.js"></script>-->
+</body>
+
+</html>

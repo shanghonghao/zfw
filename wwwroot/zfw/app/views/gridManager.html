@@ -4,10 +4,12 @@
 </div>
 <script>
     window.onresize = function(){
+        // console.log(34)
         reSize()
     }
     reSize()
     function reSize(){
+        console.log('re')
         $('.gridManager').outerHeight((window.innerHeight - 110) + 'px')
         $('.gridManager').outerWidth(window.innerWidth)
         $('.gridManager>div:eq(1)').outerWidth((window.innerWidth - 200) + 'px')

@@ -89,7 +89,7 @@ header .pic{
   float: left;
   /*width: auto;*/
   height: 100%;
-  border: solid 1px blue;
+  /*border: solid 1px blue;*/
 }
 .gridleft{
   border: solid 1px rgb(54, 112,210);
@@ -124,6 +124,7 @@ header .pic{
   height: 100%;
   width: 128px;
   background-color: rgb(30, 80, 174);
+  overflow: hidden;
 }
 .fwxq>div{
   height: 70px;
@@ -211,12 +212,12 @@ header .pic{
   color: white;
 }
 .detail{
-  padding: 10px 50px 0 20px;
-  border: solid 1px red;
+  padding: 10px 20px;
+  /*border: solid 1px red;*/
   overflow-y: scroll;
 }
 .pageb{
-  border: solid 1px red;
+  /*border: solid 1px red;*/
   height: 30px;
 }
 /*.pagec{
@@ -225,14 +226,138 @@ header .pic{
   overflow: hidden;
 }*/
 .yema{
-  border: solid 1px blue;
-  width: 70%; 
+  /*border: solid 1px blue;*/
+  max-width: 70%; 
   float: left;
   height: 100%;
+  padding-left: 20px;
 }
 .total{
-  border: solid 1px blue;
+  /*border: solid 1px blue;*/
   width: 30%; 
   float: left;
   height: 100%;
+  padding: 10px 20px;
+}
+.detail>form{
+  /*border: solid 1px blue;*/
+  /*height: 300px;*/
+  padding: 10px 0 20px 20px;
+}
+.biaoge{
+  /*border: solid 1px red;*/
+  /*height: 100%;*/
+  /*width: 1000px;*/
+  padding-right: 100px;
+}
+.biaoge>row{
+  border: solid 1px black;
+}
+.biaoge>.row>div{
+  /*border: solid 1px blue;*/
+  height: 50px;
+  padding: 0px 10px 0px 0;
+  /*line-height: 50px;*/
+  /*vertical-align: middle;*/
+}
+.zhongyuan>select{
+  float: right;
+  width: 55%;
+  margin-left: 10px;
+  /*vertical-align: middle;*/
+  height: 25px;
+  position: relative;
+  top: 12px;
+}
+.zhongyuan>label{
+  float: right;
+  /*vertical-align: middle;*/
+  /*display: inline;*/
+  position: relative;
+  top: 14px;
+  font-weight: normal;
+  font-size: 14px;
+}
+.anniu{
+  /*border: solid 1px blue;*/
+  height: 60px;
+  text-align: center;
+  padding-top: 20px;
+}
+.anniu>.btn-sm{
+  background-color: rgb(54, 112,210);
+}
+.tool{
+  /*border: solid 1px red;*/
+  height: 30px;
+  padding-left: 20px;
+}
+.tool>a{
+  /*border: solid 1px blue;*/
+  height: 100%;
+  width: 80px;
+  float: left;
+  text-align: center;
+  padding-top: 5px;
+  margin-right: 6px;
+  cursor: pointer;
+  display: block;
+}
+.liebiao{
+  /*border: solid 1px red;*/
+  /*height: 300px;*/
+  width: 100%;
+  border-collapse: separate;
+}
+.pianyi{
+  position: relative;
+  top: 2px;
+}
+.table-hover > tbody > tr:hover {
+    background-color: #f5f5f5;
+}
+.liebiao th{
+  text-align: center;
+}
+.liebiao td{
+  text-align: center;
+}
+/*@media (min-width: 1100px){}
+
+.col-md-4 {
+    width: 33.33333333%;
+}*/
+.yema>.btn-sm{
+  border-radius: 0;
+  background-color: rgb(54, 112,210);
+  height: 100%;
+  vertical-align: top;
+}
+.yema>.btn-sm.next{
+  width: 30px;
+  background-color: white;
+  color: black;
+  border: solid 1px rgb(176, 176, 176);
+}
+.pagelist{
+  /*border: solid 1px gold;*/
+  /*width: 100px;*/
+  height: 100%;
+  display: inline-block;
+  /*margin: 0;
+  padding: 0;*/
+}
+.pagelist>div{
+  border: solid 1px rgb(176, 176, 176);
+  width: 30px;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  /*line-height: 30px;*/
+  /*color: */
+  background-color: white;
+  padding-top: 4px;
+}
+.total span{
+  color: red;
 }
