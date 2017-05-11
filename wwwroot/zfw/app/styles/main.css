@@ -205,10 +205,10 @@ header .pic{
   width: 15px;
 }
 .bluebar{
-  height: 30px;
+  height: 25px;
   /*border: solid 1px red;*/
   background-color: rgb(30, 80, 174);
-  padding: 4px 20px;
+  padding: 3px 20px;
   color: white;
 }
 .detail{
@@ -290,7 +290,9 @@ header .pic{
 .tool{
   /*border: solid 1px red;*/
   height: 30px;
-  padding-left: 20px;
+  /*padding-left: 20px;*/
+  position: relative;
+  right: 10px;
 }
 .tool>a{
   /*border: solid 1px blue;*/
@@ -360,4 +362,126 @@ header .pic{
 }
 .total span{
   color: red;
+}
+.shou{
+  float: right;
+  margin-top: 6px;
+  width: 12px;
+  cursor: pointer;
+}
+.detail>.bluebar:nth-child(1){
+  margin-bottom: 10px;
+}
+#myModal{
+  background-color: rgba(255,255,255,0.6);
+
+}
+.modal-dialog{
+  border: solid 6px rgb(54, 112, 210);
+  height: 500px;
+  border-radius: 10px;
+  width: 600px;
+}
+.modal-content{
+  height: 100%;
+  background-color: rgb(245, 242, 242);
+}
+.modal-header{
+  /*border: solid 1px red;*/
+  height: 30px;
+  background-color: rgb(215, 215, 215);
+  padding: 0;
+}
+#myModalLabel{
+  font-size: 16px;
+  line-height: 30px;
+  /*border: solid 1px gold;*/
+      padding-left: 10px;
+}
+.modal-header .close {
+    margin-top: 1px;
+    margin-right: 7px;
+}
+.modal-body{
+  /*border: solid 1px blue;*/
+  height: 405px;
+  padding: 15px 50px;
+}
+.quyu{
+  /*border: solid 1px green;*/
+  height: 100%;
+}
+.shiyan{
+  /*border: solid 1px red;*/
+  /*height: 50px;*/
+}
+.test{
+  height: 100%;
+  margin-bottom: 10px;
+}
+.test>div{
+  /*border: solid 1px blue;*/
+  height: 100%;
+}
+.test label{
+  display: inline;
+}
+.one{
+  text-align: right;
+  
+}
+.one label{
+  font-weight: normal;
+}
+.two{
+  padding: 0;
+}
+.two>select{
+  
+  
+}
+.lineheight{
+  line-height: 25px;
+  font-weight: normal;
+  font-size: 15px;
+}
+#bsg{
+  background-color: rgb(215, 215, 215);
+  height: 25px;
+  width: 200px;
+}
+.xiaoqu{
+  height: 25px;
+  width: 200px;
+}
+.area{
+  width: 100%;
+  height: 100px;
+  resize: none;
+  
+}
+.tearea{
+  line-height: 100px;
+  font-weight: normal;
+  font-size: 15px;
+}
+.xing{
+  color: red;
+}
+.test input[type=radio]{
+  /*background-color: red;*/
+  vertical-align: top;
+}
+.modal-footer {
+  /*border: solid 1px red;*/
+  height: 50px;
+  padding: 0;
+  text-align: center;
+  border-top: none;
+}
+.modal-footer>.btn-primary{
+  width: 80px;
+  height: 30px;
+  background-color: rgb(54, 112, 210);
+  line-height: 17px;
 }

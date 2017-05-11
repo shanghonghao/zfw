@@ -9,6 +9,7 @@
     <div class="detail">
         <div class="bluebar">
         信息搜索
+        <img class="shou" src="images/icon31.png" alt="">
         </div>
         <form action="">
             <div class="container-fluid biaoge">
@@ -208,19 +209,104 @@
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <form class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="images/cha.png" alt=""></span></button>
+        <h4 class="modal-title" id="myModalLabel">编辑小区/村社</h4>
       </div>
       <div class="modal-body">
-        ...
+        <div class="quyu">
+            <div class="container-fluid shiyan">
+                <div class="row test">
+                    <div class="col-xs-4 one">
+                        <label class="lineheight" for="">所属村社:</label>
+                    </div>
+                     <div class="col-xs-8 two">
+                        <select name="" id="bsg">
+                            <option>中原区碧沙岗社区网格一</option>
+                            <option>中原区碧沙岗社区网格二</option>
+                            <option>中原区碧沙岗社区网格三</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row test">
+                    <div class="col-xs-4 one">
+                        <label class="lineheight" for="">小区/社名称:</label>
+                    </div>
+                     <div class="col-xs-8 two">
+                        <input class="xiaoqu" type="text">
+                    </div>
+                </div>
+                <div class="row test">
+                    <div class="col-xs-4 one">
+                        <label class="tearea" for="">基本情况:</label>
+                    </div>
+                     <div class="col-xs-8 two">
+                        <textarea placeholder="请输入基本情况..." class="area"></textarea>
+                    </div>
+                </div>
+                <div class="row test">
+                    <div class="col-xs-4 one">
+                        <label class="dzjk" for="">电子监控:</label>
+                    </div>
+                     <div class="col-xs-8 two">
+                        <input type="radio" checked="checked" name="watch" value="0">&nbsp;未安装&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="watch" value="1">&nbsp;已安装
+                    </div>
+                </div>
+                <div class="row test">
+                    <div class="col-xs-4 one">
+                        <label class="dzjk" for="">封闭情况:</label>
+                    </div>
+                     <div class="col-xs-8 two">
+                        <input type="radio" checked="checked" name="fbqk" value="0">&nbsp;未封闭&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="fbqk" value="1">&nbsp;已封闭
+                    </div>
+                </div>
+                <div class="row test">
+                    <div class="col-xs-4 one">
+                        <label class="dzjk" for="">治安乱点:</label>
+                    </div>
+                     <div class="col-xs-8 two">
+                        <input type="radio" checked="checked" name="zald" value="0">&nbsp;否&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="zald" value="1">&nbsp;是
+                    </div>
+                </div>
+                <div class="row test">
+                    <div class="col-xs-4 one">
+                        <span class="xing">*</span>
+                        <label class="lineheight" for="">小区/社负责人:</label>
+                    </div>
+                     <div class="col-xs-8 two">
+                        <input class="xiaoqu" type="text">
+                    </div>
+                </div>
+                <div class="row test">
+                    <div class="col-xs-4 one">
+                        <span class="xing">*</span>
+                        <label class="lineheight" for="">负责人电话:</label>
+                    </div>
+                     <div class="col-xs-8 two">
+                        <input class="xiaoqu" type="text">
+                    </div>
+                </div>
+                <div class="row test">
+                    <div class="col-xs-4 one">
+                        <label class="lineheight" for="">小区位置:</label>
+                    </div>
+                     <div class="col-xs-8 two">
+                        <span class="xing">小区位置</span>
+                    </div>
+                </div>
+            </div>
+        </div>
       </div>
+
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">确认</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">关闭</button>
       </div>
-    </div>
+    </form>
   </div>
 </div>
 <script>
@@ -236,5 +322,8 @@
             $('.detail').css('max-height', height + "px")
         
     }
+    $('.shou').click(function(){
+        $('.detail>form').slideToggle()
+    })
 
 </script>
